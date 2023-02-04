@@ -5,25 +5,27 @@ import { useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import BrunoLogo from "./../../assets/BrunoLogo.png"
 import "./Sidebar.scss"
-const CustomLink = ({to, clase , children, clicked}) => {
-    const location = useLocation();
-    const active = location.pathname === to;
-    const selected = active ? {fontWeight: "bold", color: "white", fontSize: "40px"} : {color: "black"}
-    return(
-        <NavLink to={to} style={selected} className={clase} onClick={clicked}>
-            {children}
-        </NavLink>
-    );
-}
 
-
-const hideSideBar = (sidebar) => {
-    sidebar.current.classList.toggle("show");
-}
 
 const SideBar = ({ changeLink }) => {
     const sidebar = useRef();
     
+    const CustomLink = ({to, clase , children}) => {
+    const location = useLocation();
+    const active = location.pathname === to;
+    const selected = active ? {fontWeight: "bold", color: "white", fontSize: "40px"} : {color: "black"}
+    return(
+        <NavLink to={to} style={selected} className={clase} onClick={() => hideSideBar(sidebar)}>
+            {children}
+        </NavLink>
+    );
+    
+    }
+
+    const hideSideBar = (sidebar) => {
+        sidebar.current.classList.toggle("show");
+    }
+
     return (
         <>
         <button id='menu'><FontAwesomeIcon icon={faBars} onClick={() => hideSideBar(sidebar)}/></button>
@@ -35,10 +37,10 @@ const SideBar = ({ changeLink }) => {
                 </NavLink>
             </div>
             <ul className='links__list'>
-                <CustomLink to={"/"} clase={"home-link"} clicked={changeLink}><FontAwesomeIcon icon={faHome}/></CustomLink>
-                <CustomLink to={"/about"} clase={"about-link"} clicked={changeLink}><FontAwesomeIcon icon={faUser} /></CustomLink>
-                <CustomLink to={"/study"} clase={"study-link"} clicked={changeLink}><FontAwesomeIcon icon={faStar} /></CustomLink>
-                <CustomLink to={"/tech"} clase={"tech-link"} clicked={changeLink}><FontAwesomeIcon icon={faLaptop} /></CustomLink>
+                <CustomLink to={"/"} clase={"home-link"} ><FontAwesomeIcon icon={faHome}/></CustomLink>
+                <CustomLink to={"/about"} clase={"about-link"} ><FontAwesomeIcon icon={faUser} /></CustomLink>
+                <CustomLink to={"/study"} clase={"study-link"} ><FontAwesomeIcon icon={faStar} /></CustomLink>
+                <CustomLink to={"/tech"} clase={"tech-link"} ><FontAwesomeIcon icon={faLaptop} /></CustomLink>
             </ul>
             <ul className='contact__links'>
                 <a href="https://www.linkedin.com/in/bruno-capote-hernández/"><i class="fa-brands fa-linkedin"></i></a>
