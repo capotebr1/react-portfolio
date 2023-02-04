@@ -36,7 +36,7 @@ const Home = () => {
                     <br/> Web Developer. 
                 
                 </h1>
-                <h2> <span className='orangeText'>Trainee Fullstack Developer | JavaScript Main</span> </h2>
+                <h2> <span className='orangeText'>Trainee Fullstack Developer | Experienced using Javascript</span> </h2>
             </div>
             <motion.div className='home__menu'
                 initial={{
