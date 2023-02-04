@@ -49,7 +49,7 @@ const About = () => {
                     </p>  
                     <br />
                     <p>
-                        I specialize in <span className="highlight">Front-End Development</span>. However i'm' studying Backend tools
+                        I specialize in <span className="highlight">Front-End Development</span>. However i'm studying Backend tools
                         like MERN Stack and Java.
                     </p>  
                     <br />
@@ -61,7 +61,7 @@ const About = () => {
                         Interests:
                         <ul>
                             <li >Rock Lover ⚡🎵</li>
-                            <li >I love watching movies, speacially directed by Quentin Tarantino 😎🎥 </li>
+                            <li >I love watching movies, specifically directed by Quentin Tarantino 😎🎥 </li>
                             <li >I'm a Tech Geek 🧑‍💻 </li>
                         </ul>
                     </p>
