@@ -51,14 +51,16 @@ const Home = () => {
                     delay: .5
                 }}
             >
-                <button className='home__buttons'>
-                    <a href='mailto:brunocapotehdez@gmail.com'>Contact me</a>
-                </button>
-                <button className='home__buttons'>
-                    <a href={cvpdf} target="_blank" rel='noopener noreferrer' download={"CV Bruno Capote.pdf"}>
+                <a href='mailto:brunocapotehdez@gmail.com'>
+                    <button className='home__buttons'>
+                        Contact me
+                    </button>
+                </a>
+                <a href={cvpdf} target="_blank" rel='noopener noreferrer' download={"CV Bruno Capote.pdf"}>
+                    <button className='home__buttons' >
                         Download CV
-                    </a>
-                </button>
+                    </button>
+                </a>
             </motion.div>
         </motion.div>
     );
