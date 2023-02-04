@@ -70,7 +70,7 @@ const Projects = () => {
                     />
                     ))}
             </div>
-            <p id='check-git'>Check my <span className='highlight'><a href="">Github</a></span> to see more projects </p>
+            <p id='check-git'>Check my <span className='highlight'><a href="https://github.com/capotebr1" target="_blank">Github</a></span> to see more projects </p>
         </motion.div>
     );
 }
