@@ -19,7 +19,7 @@ const SideBar = ({ changeLink }) => {
             {children}
         </NavLink>
     );
-    
+
     }
 
     const hideSideBar = (sidebar) => {
@@ -28,7 +28,7 @@ const SideBar = ({ changeLink }) => {
 
     return (
         <>
-        <button id='menu'><FontAwesomeIcon icon={faBars} onClick={() => hideSideBar(sidebar)}/></button>
+        <button id='menu' onClick={() => hideSideBar(sidebar)}><FontAwesomeIcon icon={faBars} /></button>
         <div className='side__bar' ref={sidebar}>
             
             <div className='side__bar__header'>
