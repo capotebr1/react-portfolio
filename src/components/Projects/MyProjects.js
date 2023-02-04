@@ -8,7 +8,7 @@ import ECommerce3 from "./../../assets/projectsImages/e-commerce3.png"
 const ProjectsList = [
     {
         projectTitle: "E-Commerce JAP",
-        description: "Functional E-Commerce realized during the course 'Jóvenes a Programar'.",
+        description: "Functional E-Commerce realized throughout 'Jóvenes a Programar'.",
         link: "https://capotebr1.github.io/e-comerce-JAP/",
         technologies:[
             "HTML",
