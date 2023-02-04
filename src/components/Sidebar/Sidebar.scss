@@ -3,6 +3,10 @@ $orange-web: #fca311;
 $platinum: #e5e5e5;
 
 
+#menu{
+    display: none;
+}
+
 @keyframes gradientMovement {
     0%{
         background-position: left;
@@ -121,5 +125,47 @@ $platinum: #e5e5e5;
                 color: white;
             }
         }
+    }
+}
+
+@media (max-width: 1180px) {
+    #menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 40px;
+        width: 110px;
+        z-index: 30;
+    }
+
+    .side__bar{
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        right: 0;
+        transform: translateX(200px);
+        width: 200px;
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        .side__bar__header{
+
+            img{
+                display: none;
+            }
+        }
+
+        .links__list{
+            gap: 140px;
+
+            a{
+                font-size: 2rem;
+            }
+        }
+
+        .contact__links{
+            display: none;
+        }
+    }
+    .show{
+        transform: translateX(0px);
     }
 }

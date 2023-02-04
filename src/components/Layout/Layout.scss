@@ -2,15 +2,6 @@
 $oxford-blue: #14213D;
 $orange-web: #fca311;
 $platinum: #e5e5e5;
-.App{
-    position: absolute;
-    overflow-y: scroll ;
-    height: 100%;
-    width: 100%;
-    background-size: 300%;
-    background-image: linear-gradient(45deg, rgb(0, 0, 0), rgb(28, 0, 42), rgb(53, 0, 114), rgb(164, 0, 173));
-    animation: gradientMovement 5s infinite alternate;
-}
 
 .change{
     animation: changeLink .5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -41,13 +32,16 @@ $platinum: #e5e5e5;
     margin-left: 220px;
     padding: 20px;
     height: 100%;
+}
 
-    &:first-child{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media (max-width: 1180px) {
+    .page{
+        margin-left: 0px;
+
+        width: 100%;
+        top: auto;
     }
+
 }
 
 

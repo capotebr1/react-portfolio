@@ -40,3 +40,13 @@ $platinum: #e5e5e5;
 .orangeText{
     color: $orange-web;
 }
+
+@media (max-width:1180px) {
+    .home__container{
+        .home__header{
+            h2{
+                font-size: 2rem;
+            }
+        }
+    }
+}

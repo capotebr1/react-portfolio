@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faHome,faLaptop,faLaughBeam,faStar,faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faHome,faLaptop,faLaughBeam,faStar,faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import BrunoLogo from "./../../assets/BrunoLogo.png"
 import "./Sidebar.scss"
@@ -15,10 +16,19 @@ const CustomLink = ({to, clase , children, clicked}) => {
     );
 }
 
-const SideBar = ({ changeLink }) => {
 
+const hideSideBar = (sidebar) => {
+    sidebar.current.classList.toggle("show");
+}
+
+const SideBar = ({ changeLink }) => {
+    const sidebar = useRef();
+    
     return (
-        <div className='side__bar'>
+        <>
+        <button id='menu'><FontAwesomeIcon icon={faBars} onClick={() => hideSideBar(sidebar)}/></button>
+        <div className='side__bar' ref={sidebar}>
+            
             <div className='side__bar__header'>
                 <NavLink to="/">
                     <img src={BrunoLogo} alt="" />
@@ -36,6 +46,7 @@ const SideBar = ({ changeLink }) => {
                 <a href="mailto:brunocapotehdez@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </ul>
         </div>
+        </>
     );
 }
 

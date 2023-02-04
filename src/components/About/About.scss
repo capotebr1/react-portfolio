@@ -23,7 +23,7 @@ $platinum: #e5e5e5;
         padding-bottom: 20px;
         .studies{
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3,250px);
             grid-auto-rows: auto;
             gap: 40px;
 
@@ -98,4 +98,17 @@ $platinum: #e5e5e5;
 .highlight{
     color: $orange-web;
     font-weight: bold;
+}
+
+@media (max-width: 1180px) {
+    .about-container{
+
+        .about-studies{
+
+            .studies{
+                display:flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
 }
