@@ -1,0 +1,125 @@
+$oxford-blue: #14213D;
+$orange-web: #fca311;
+$platinum: #e5e5e5;
+
+
+@keyframes gradientMovement {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.side__bar{
+    ul{
+        list-style: circle;
+    }
+
+    background-color: #fca311;
+    box-shadow: 10px 0px 15px 5px rgba(0, 0, 0, 0.20);
+    z-index: 20;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    padding: 10px;
+    max-width: 200px;
+    gap: 100px;
+    .side__bar__header{
+        text-align: center;
+        img{
+            width: 120px;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .15s;
+            &:hover{
+                transform: scale(1.05);
+            }
+
+            &:active{
+                transform: scale(1);
+            }
+        }
+    }
+    .links__list{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        width: 100%;
+        a{
+            font-size: 28px;
+            display: block;
+            position: relative;
+            width: 100%;
+            transition: ease-in .2s;
+            &:hover{
+                color: black;
+                svg{
+                    opacity: 0;
+                }
+
+                &:after{
+                    opacity: 1;
+                    transform: translateY(-10px);
+                }
+            }
+
+            &:after{
+                content: "";
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                position: absolute;
+                text-align: center;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                top: 50%;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+        }
+        .home-link{
+            &::after{
+                content: "HOME";
+            }
+        }
+        .about-link{
+            &::after{
+                content: "ABOUT";
+            }
+        }
+        .study-link{
+            &::after{
+                content: "SKILLS";
+            }
+        }
+        .tech-link{
+            &::after{
+                content: "PROJECTS";
+            }
+        }
+    }
+    .contact__links{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 28px;
+            text-align: center;
+            transition: all .15s ease-in-out;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}

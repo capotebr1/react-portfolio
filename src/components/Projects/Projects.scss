@@ -1,0 +1,80 @@
+$oxford-blue: #14213D;
+$orange-web: #fca311;
+$platinum: #e5e5e5;
+
+#check-git{
+    position: absolute;
+    bottom: 0;
+    color: $platinum;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    a{
+        color: #fca311;
+        text-decoration: underline;
+    }
+}
+.project-container{
+    height: 100%;
+    position: relative;
+    .projects-cards{
+        margin-top: 4rem;
+        .card-container{
+            background-color: rgba(0,0,0,0.40);
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            width: 1100px;
+            h2{
+                color: $orange-web;
+                font-weight: bold;
+            }
+            p{
+                color: #e5e5e5;
+                font-size: 1.5rem;
+                align-self: flex-end;
+            }
+            img{
+                width: 550px;
+                height: 300px;
+                border-radius: 10px;
+            }
+            .card-info{
+                margin-left: 20px;
+                padding: 20px 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .info-footer{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    div{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+
+                        li{
+                            color: white;
+                            border-radius: 10px;
+                            border: 3px solid $orange-web;
+                            padding: 5px 10px;
+                        }
+                    }
+                    h2{
+                        a{
+                            color: $orange-web;
+                        }
+                        font-size: 4rem;
+                        transition: .3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+                        &:hover{
+                            color: rgb(51, 116, 255);
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

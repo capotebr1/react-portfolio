@@ -1,0 +1,42 @@
+$oxford-blue: #14213D;
+$orange-web: #fca311;
+$platinum: #e5e5e5;
+
+.name{
+    text-shadow: -6px 0px rgb(156, 57, 255);
+}
+
+.home__container{
+    
+    .home__header{
+        color: $platinum;
+        h1{
+            color: $platinum;
+            text-shadow: none;
+        }
+        h2{
+            font-size: 3rem;
+            font-weight: normal;
+        }
+    }
+    .home__menu{
+        opacity: 1;
+        display: flex;
+        gap: 20px;
+    }
+}
+
+@keyframes spawn {
+    from{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.orangeText{
+    color: $orange-web;
+}

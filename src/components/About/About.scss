@@ -1,0 +1,101 @@
+$oxford-blue: #14213D;
+$orange-web: #fca311;
+$platinum: #e5e5e5;
+
+.about-container{
+    li{
+        list-style: circle;
+        margin-left: 26px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    p{
+        color: $platinum;
+        font-size: 26px;
+        width: 80%;
+    }
+
+    .about-studies{
+        padding-bottom: 20px;
+        .studies{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: auto;
+            gap: 40px;
+
+            .study-card{
+                border-radius: 10px;
+                position: relative;
+                height: 300px;
+                width: 250px;
+                text-align: center;
+                background-size: cover;
+                background-position: center;
+                color: white;
+                display: flex;
+                background-image: url();
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.30);
+
+                h2{
+                    font-size: 28px;
+                    text-shadow: 0px 3px rgb(19, 0, 143);
+                    z-index: 10;
+                }
+                h3{
+                    font-size: 20px;
+                    text-shadow: 0px 3px rgb(19, 0, 143);
+                    z-index: 10;
+                }
+
+                .bg-template{
+                    position: absolute;
+                    background-image: linear-gradient(0deg, rgb(19, 0, 143, 5), rgba(0,0,0,5), rgba(0,0,0,1));
+                    opacity: .5;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    z-index: 5;
+                    transition: all .15s ease-out;
+                    border-radius: 10px;
+                }
+
+                &:hover{
+                    .bg-template{
+                        opacity: .75;
+                    }
+                }
+
+            }
+            .study-card:nth-child(1){
+                background-image: url(../../assets/fing.jpg);
+                
+            }
+            .study-card:nth-child(2){
+                background-image: url(../../assets/Jovenes-a-Programar.png);
+            }
+            .study-card:nth-child(3){
+                background-image: url(../../assets/anglo.png);
+            }
+            .study-card:nth-child(4){
+                background-image: url(../../assets/ibm.jpg);
+                background-position: center 200px;
+            }
+            .study-card:nth-child(5){
+                background-image: url(../../assets/scrum.png);
+            }
+
+        }
+    }
+}
+
+.highlight{
+    color: $orange-web;
+    font-weight: bold;
+}
