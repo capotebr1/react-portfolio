@@ -22,7 +22,7 @@ $platinum: #e5e5e5;
     .home__menu{
         opacity: 1;
         display: flex;
-        gap: 20px;
+        flex-wrap: wrap;
     }
 }
 

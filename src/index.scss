@@ -38,6 +38,7 @@ button{
     border-radius: 10px;
     color: $platinum;
     padding: 10px 30px;
+    margin: 10px;
     cursor: pointer;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
     &:hover{
@@ -62,7 +63,7 @@ button{
     }
 
     button{
-        padding: 5px 20px;
+        // padding: 5px 20px;
         font-size: 1.5rem;
     }
 }

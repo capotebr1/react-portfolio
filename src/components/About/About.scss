@@ -20,11 +20,12 @@ $platinum: #e5e5e5;
     }
 
     .about-studies{
+        width: 100%;
         padding-bottom: 20px;
         .studies{
+            width: 100%;
             display: grid;
-            grid-template-columns: repeat(3,250px);
-            grid-auto-rows: auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));            grid-auto-rows: auto;
             gap: 40px;
 
             .study-card{
@@ -98,17 +99,4 @@ $platinum: #e5e5e5;
 .highlight{
     color: $orange-web;
     font-weight: bold;
-}
-
-@media (max-width: 1180px) {
-    .about-container{
-        
-        .about-studies{
-
-            .studies{
-                display:flex;
-                flex-wrap: wrap;
-            }
-        }
-    }
 }
